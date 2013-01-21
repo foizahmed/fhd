@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap test</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <style type="text/css">
+        .show-grid {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .show-grid [class*="span"] {
+            background-color: #eee;
+            text-align: center;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            min-height: 40px;
+            line-height: 40px;
+        }
+        .show-grid:hover [class*="span"] {
+            background: #ddd;
+        }
+        .show-grid .show-grid {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .show-grid .show-grid [class*="span"] {
+            margin-top: 5px;
+        }
+        .show-grid [class*="span"] [class*="span"] {
+            background-color: #ccc;
+        }
+        .show-grid [class*="span"] [class*="span"] [class*="span"] {
+            background-color: #999;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="container">
+        <div class="navbar-inner">
+            <a class="brand" href="#">News Cred</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row show-grid">
+        <div class="span4">span 4</div>
+        <div class="span8">span 8</div>
+    </div>
+
+    <div class="row show-grid">
+        <div class="span4">span 4</div>
+        <div class="span4 offset4">span 4 offset 4</div>
+    </div>
+    <div class="row show-grid">
+        <div class="span4 offset4">span 4 offset 4</div>
+        <div class="span4">span 4</div>
+    </div>
+
+    <div class="row show-grid">
+        <div class="span12">
+            Fluid 12
+            <div class="row show-grid">
+                <div class="span6">
+                    Fluid 6
+                    <div class="row show-grid">
+                        <div class="span3">Fluid 3</div>
+                        <div class="span3">Fluid 3</div>
+                    </div>
+                </div>
+                <div class="span6">Fluid 6</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>User Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="success">
+            <td>1</td>
+            <td>Foiz</td>
+            <td>Ahmed</td>
+            <td>foiz@newscred.com</td>
+        </tr>
+        <tr class="error">
+            <td>2</td>
+            <td>Foiz</td>
+            <td>Ahmed</td>
+            <td>foiz@newscred.com</td>
+        </tr>
+        <tr class="warning">
+            <td>3</td>
+            <td>Foiz</td>
+            <td>Ahmed</td>
+            <td>foiz@newscred.com</td>
+        </tr>
+        <tr class="info">
+            <td>3</td>
+            <td>Foiz</td>
+            <td>Ahmed</td>
+            <td>foiz@newscred.com</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container">
+    <div class="input-append">
+        <input class="span2" id="appendedDropdownButton" type="text">
+        <div class="btn-group">
+            <button class="btn dropdown-toggle" data-toggle="dropdown">
+                Action
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">option 1</a></li>
+                <li><a href="#">option 2</a></li>
+                <li><a href="#">option 3</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="input-prepend">
+        <span class="add-on">@</span>
+        <input type="text" placeholder="test data">
+    </div>
+    <div class="input-append">
+        <input type="password" placeholder="password">
+        <span class="add-on">:</span>
+    </div>
+    <div class="input-prepend input-append">
+        <span class="add-on">@</span>
+        <input type="text" class="span5" placeholder="both">
+        <span class="add-on">:</span>
+    </div>
+</div>
+
+<div class="container">
+    <div class="input-append">
+    <input type="text">
+    <button type="submit" class="btn">Search</button>
+        <button type="submit" class="btn">Option</button>
+    </div>
+</div>
+
+<div class="container">
+    <form class="form-search">
+        <div class="input-append">
+            <input type="text" class="span2 search-query">
+            <button type="submit" class="btn">Search</button>
+        </div>
+        <div class="input-prepend">
+            <button type="submit" class="btn">Search</button>
+            <input type="text" class="span2 search-query">
+        </div>
+    </form>
+</div>
+
+<div class="container">
+    <div class="input-append">
+        <input class="span2"  type="text" placeholder="dropdown test">
+        <div class="btn-group">
+            <button class="btn dropdown-toggle" data-toggle="dropdown">
+                Action
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">test 1</a></li>
+                <li><a href="#">test 2</a></li>
+                <li><a href="#">test 3</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <form>
+        <fieldset>
+            <legend>Legend</legend>
+            <label>Lebel Name</label>
+            <input type="text" placeholder="Type Something">
+            <span class="help-block">Example block-level help text here.</span>
+            <label class="checkbox">
+                <input type="checkbox">Check me out
+            </label>
+            <button type="submit" class="btn">Submit</button>
+        </fieldset>
+    </form>
+</div>
+
+<div class="container">
+    <form class="form-search">
+        <input type="text" class="input-medium search-query">
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</div>
+
+<div class="container">
+    <form class="form-inline">
+        <input type="text" class="input-small" placeholder="Email">
+        <input type="password" class="input-small" placeholder="Password">
+        <label class="checkbox">
+            <input type="checkbox"> Remember me
+        </label>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</div>
+
+<div class="container">
+    <select>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+
+    <select multiple="multiple">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+</div>
+
+<div class="container">
+    <div class="input-prepend">
+        <span class="add-on">@</span>
+        <input type="text" class="span2" placeholder="User Name">
+    </div>
+    <div class="input-append">
+        <input type="text" class="span2">
+        <span class="add-on">:</span>
+    </div>
+    <div class="input-prepend input-append">
+        <span class="add-on">@</span>
+        <input type="text" class="span2" placeholder="Name">
+        <span class="add-on">:</span>
+    </div>
+    <!--
+    <div class="input-append">
+        <input class="span2" id="appendedDropdownButton" type="text">
+        <div class="btn-group">
+            <button class="btn dropdown-toggle" data-toggle="dropdown">
+                Action
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Option 1</a></li>
+                <li><a href="#">Option 1</a></li>
+                <li><a href="#">Option 1</a></li>
+            </ul>
+        </div>
+    </div>
+    -->
+    <div class="input-append">
+        <input type="text" class="span2" placeholder="test dropdown">
+        <div class="btn-group">
+            <button class="btn dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span> </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">option 1</a></li>
+                <li><a href="#">option 1</a></li>
+                <li><a href="#">option 1</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <form class="form-search">
+        <div class="input-append">
+            <input type="text" class="span2 search-query">
+            <button type="submit" class="btn">Search</button>
+        </div>
+        <div class="input-prepend">
+            <button type="submit" class="btn">Search</button>
+            <input type="text" class="span2 search-query">
+        </div>
+    </form>
+    <div class="input-append">
+        <input type="text" class="span4">
+        <button class="btn" type="button">Search</button>
+        <button class="btn" type="button">Option</button>
+    </div>
+
+
+</div>
+
+<div class="container">
+    <div class="dropdown">
+        <!-- Link or button to toggle dropdown -->
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            <li><a tabindex="-1" href="#">Action</a></li>
+            <li><a tabindex="-1" href="#">Another action</a></li>
+            <li><a tabindex="-1" href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a tabindex="-1" href="#">Separated link</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="breadcrumb">
+        <li><a href="#">Home</a><span class="divider">/</span> </li>
+        <li><a href="#">About</a><span class="divider">/</span> </li>
+        <li class="active">contact</li>
+    </ul>
+</div>
+
+
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
